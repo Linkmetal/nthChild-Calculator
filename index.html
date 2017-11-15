@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.min.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Calculadora nth:child</title>
+</head>
+<body onload="init()">
+    <div id="options">
+        <label for="formula">
+            <span>Fórmula: </span>
+            <input type="text" id="formula" name="formula" list="completeBox">
+            <datalist id="completeBox"></datalist>
+        </label>
+
+        <label for="alto">
+                <span>Alto: </span>
+                <input onchange="resize()" type="number" id="alto" name="alto" value="20" min="1" max="35">
+        </label>
+
+        <label for="ancho">
+                <span>Ancho: </span>
+                <input onchange="resize()" type="number" id="ancho" name="ancho" value="20" min="1" max="35">
+        </label>
+
+        <label for="mainColor">
+                <span>Color principal: </span>
+                <input onchange="saveColor(0)" type="color" id="mainColor" name="mainColor">
+        </label>
+
+        <label for="secColor">
+                <span>Color secundario: </span>
+                <input onchange="saveColor(1)" type="color" id="secColor" name="secColor">
+        </label>
+
+        <button onclick="calculate()" id="aceptar">Aceptar</button>
+        <button onclick="reset()" id="reset">Reset</button>
+        
+    </div>
+    <div id = "flex-container">
+        <div id = "container"></div>
+    </div>
+</body>
+</html>
